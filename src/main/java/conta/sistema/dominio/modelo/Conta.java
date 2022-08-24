@@ -27,7 +27,7 @@ public class Conta {
         if (isNull(credito)) {
             obrigatorio("Valor crédito");
         }
-        if (credito.compareTo(BigDecimal.ONE) <= 0) {
+        if (credito.compareTo(BigDecimal.ZERO) <= 0) {
             obrigatorio("Valor crédito");
         }
         saldo = saldo.add(credito);
@@ -37,13 +37,13 @@ public class Conta {
         if (isNull(debito)) {
             obrigatorio("Valor débito");
         }
-        if (debito.compareTo(BigDecimal.ONE) <= 0) {
+        if (debito.compareTo(BigDecimal.ZERO) <= 0) {
             obrigatorio("Valor débito");
         }
         if (debito.compareTo(saldo) > 0) {
             saldoInsuficiente();
         }
-        saldo = saldo.subtract(saldo);
+        saldo = saldo.subtract(debito);
     }
 
     public Integer getNumero() {
