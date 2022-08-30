@@ -1,4 +1,4 @@
-package unidade.dominio.servico;
+package teste.unidade.dominio.servico;
 import conta.sistema.dominio.modelo.Conta;
 import conta.sistema.dominio.modelo.NegocioException;
 import conta.sistema.dominio.servico.Transferencia;
