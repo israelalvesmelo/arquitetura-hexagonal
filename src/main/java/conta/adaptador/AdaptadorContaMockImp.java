@@ -17,7 +17,7 @@ import static java.util.Objects.isNull;
 public class AdaptadorContaMockImp implements ContaRepositorio {
     private Map<Integer, Conta> banco = new HashMap<>();
 
-    public AdaptadorContaMockImp(Map<Integer, Conta> banco) {
+    public AdaptadorContaMockImp() {
         banco.put(10, new Conta(10, new BigDecimal(100), "Fernando Fake"));
         banco.put(20, new Conta(20, new BigDecimal(100), "Rebeca Fake"));
     }
