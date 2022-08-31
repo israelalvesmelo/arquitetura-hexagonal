@@ -1,4 +1,4 @@
-package conta.adaptador;
+package conta.adaptador.dev;
 
 import conta.sistema.dominio.modelo.Conta;
 import conta.sistema.dominio.modelo.NegocioException;
@@ -14,10 +14,10 @@ import static java.util.Objects.isNull;
 // Responsável por implementar a porta de saída (driven) de serviços de banco de dados falso.
 // será gerenciado pelo IoC
 @Named
-public class AdaptadorContaMockImp implements ContaRepositorio {
+public class ContaRepositorioMockImp implements ContaRepositorio {
     private Map<Integer, Conta> banco = new HashMap<>();
 
-    public AdaptadorContaMockImp() {
+    public ContaRepositorioMockImp() {
         banco.put(10, new Conta(10, new BigDecimal(100), "Fernando Fake"));
         banco.put(20, new Conta(20, new BigDecimal(100), "Rebeca Fake"));
     }

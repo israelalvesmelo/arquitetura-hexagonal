@@ -1,4 +1,4 @@
-package teste.casouso;
+package conta.build;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
         // objetos de sistema
         "conta.sistema",
         // adptadores falsos
-        "conta.adaptador"})
-public class Build1 {
+        "conta.adaptador.dev"})
+public class BuildDev {
     // Build 1: Adaptador Testes -> Sistema <- Adptadores Mocks
 }
